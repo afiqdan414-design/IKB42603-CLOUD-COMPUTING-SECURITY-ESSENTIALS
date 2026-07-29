@@ -57,7 +57,7 @@ docker run --rm hello-world
 ```
 
 #### Execution Output:
-![Docker Verification](1.%20docker.png)
+![Docker Verification](Evidence/1. docker.png)
 
 *Verified Output:* `Docker version 28.5.2+dfsg4, build 9cc6dea35e9a963f281434761c656fba4ac43aed`
 
