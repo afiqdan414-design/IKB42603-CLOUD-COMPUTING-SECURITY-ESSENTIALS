@@ -146,10 +146,12 @@ oathtool --version
 
 **OpenSSL Verification:**  
 <img width="669" height="300" alt="4  OpenSSL" src="https://github.com/user-attachments/assets/dbb35710-e681-4d97-b544-74e9fd9bf42c" />
+
 *Verified Output:* `OpenSSL 3.5.2 5 Aug 2025 (Library: OpenSSL 3.5.2 5 Aug 2025)`
 
 **oathtool Verification:**  
 <img width="642" height="166" alt="4  Oathtool" src="https://github.com/user-attachments/assets/07b8a2de-e045-4a4d-8e9e-f5de6f26a1ed" />
+
 *Verified Output:* `oathtool (OATH Toolkit) 2.6.14`
 
 ---
@@ -176,6 +178,7 @@ docker rm -f localstack # Complete removal
 
 #### Execution Output:
 <img width="796" height="397" alt="5  Localstack start and stop" src="https://github.com/user-attachments/assets/db71b273-23f7-40fb-be80-fbf3c86ebb4a" />
+
 *Verified Output:* Endpoint `http://localhost:4566/_localstack/health` returns HTTP 200 JSON with status `"available"` for services (`acm`, `apigateway`, `dynamodb`, `ec2`, `iam`, `lambda`, `s3`, `sts`, etc.), version `3.0.2`.
 
 ---
@@ -201,10 +204,12 @@ kind delete cluster --name ccse
 
 **Creating Cluster & Checking Cluster Info:**  
 <img width="792" height="497" alt="5  Kubernetes create cluster" src="https://github.com/user-attachments/assets/2f1cb0be-0c03-406c-8658-17f0a3bc9859" />
+
 *Verified Output:* Control plane running at `https://127.0.0.1:42117` with CoreDNS available.
 
 **Listing Nodes & Deleting Cluster:**  
 <img width="492" height="218" alt="5  kubernetes nodes and delete cluster" src="https://github.com/user-attachments/assets/099c2781-705a-4888-8f29-e87305cbc436" />
+
 *Verified Output:* 
 - Node `ccse-control-plane` in status `Ready` (role: `control-plane`, version `v1.30.0`).
 - Successful cluster deletion of `ccse`.
@@ -228,7 +233,8 @@ aws $EP sts get-caller-identity
 ```
 
 #### Execution Output:
-<img width="367" height="237" alt="6  AWS CLI configuration" src="https://github.com/user-attachments/assets/ae1f9e04-ca09-4850-92b6-e215387ff11a" />
+<img width="367" height="237" alt="6  AWS CLI configuration" src="https://github.com/user-attachments/assets/8220b8a5-3cdd-4a66-a8d8-d2f64ef45704" />
+
 
 
 > [!TIP]
