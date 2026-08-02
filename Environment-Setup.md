@@ -1,7 +1,7 @@
 # Lab 0: Environment Setup & Verification Report
 **Course:** IKB42603 Cloud Computing Security Essentials  
 **Institution:** Universiti Kuala Lumpur Malaysian Institute of Information Technology (UniKL MIIT)  
-**Instructor:** Prof. Dr. Shahrulniza Musa  
+**Instructor:** Nor Adani Kamal Mohd Nasir
 **Document:** `Environment-Setup.md`  
 
 ---
@@ -57,7 +57,8 @@ docker run --rm hello-world
 ```
 
 #### Execution Output:
-![Docker Verification](1.%20docker.png)
+<img width="617" height="77" alt="1  docker" src="https://github.com/user-attachments/assets/541d5713-57fa-4607-927c-087a488cbd09" />
+
 
 *Verified Output:* `Docker version 28.5.2+dfsg4, build 9cc6dea35e9a963f281434761c656fba4ac43aed`
 
@@ -86,7 +87,7 @@ aws --version
 ```
 
 #### Execution Output:
-![AWS CLI Verification](2.%20AWS%20CLI.png)
+<img width="605" height="71" alt="2  AWS CLI" src="https://github.com/user-attachments/assets/2dcacc0c-fb2b-4a21-8b9a-60f3b7775de0" />
 
 *Verified Output:* `aws-cli/2.36.9 Python/3.14.6 Linux/6.12.38+kali-amd64 exe/x86_64.kali.2025`
 
@@ -111,7 +112,7 @@ kubectl version --client
 ```
 
 #### Execution Output:
-![Kind and Kubectl Verification](3.%20Kind%20and%20KubeCTL%20.png)
+<img width="260" height="145" alt="3  Kind and KubeCTL " src="https://github.com/user-attachments/assets/42db6046-85ce-4cfd-9ac8-a825c1a5ea31" />
 
 *Verified Output:*
 - `kind version 0.23.0`
@@ -144,11 +145,11 @@ oathtool --version
 #### Execution Outputs:
 
 **OpenSSL Verification:**  
-![OpenSSL Verification](4.%20OpenSSL.png)  
+<img width="669" height="300" alt="4  OpenSSL" src="https://github.com/user-attachments/assets/dbb35710-e681-4d97-b544-74e9fd9bf42c" />
 *Verified Output:* `OpenSSL 3.5.2 5 Aug 2025 (Library: OpenSSL 3.5.2 5 Aug 2025)`
 
 **oathtool Verification:**  
-![Oathtool Verification](4.%20Oathtool.png)  
+<img width="642" height="166" alt="4  Oathtool" src="https://github.com/user-attachments/assets/07b8a2de-e045-4a4d-8e9e-f5de6f26a1ed" />
 *Verified Output:* `oathtool (OATH Toolkit) 2.6.14`
 
 ---
@@ -174,7 +175,7 @@ docker rm -f localstack # Complete removal
 ```
 
 #### Execution Output:
-![Localstack Start and Stop](5.%20Localstack%20start%20and%20stop.png)  
+<img width="796" height="397" alt="5  Localstack start and stop" src="https://github.com/user-attachments/assets/db71b273-23f7-40fb-be80-fbf3c86ebb4a" />
 *Verified Output:* Endpoint `http://localhost:4566/_localstack/health` returns HTTP 200 JSON with status `"available"` for services (`acm`, `apigateway`, `dynamodb`, `ec2`, `iam`, `lambda`, `s3`, `sts`, etc.), version `3.0.2`.
 
 ---
@@ -199,11 +200,11 @@ kind delete cluster --name ccse
 #### Execution Outputs:
 
 **Creating Cluster & Checking Cluster Info:**  
-![Kubernetes Create Cluster](5.%20Kubernetes%20create%20cluster.png)  
+<img width="792" height="497" alt="5  Kubernetes create cluster" src="https://github.com/user-attachments/assets/2f1cb0be-0c03-406c-8658-17f0a3bc9859" />
 *Verified Output:* Control plane running at `https://127.0.0.1:42117` with CoreDNS available.
 
 **Listing Nodes & Deleting Cluster:**  
-![Kubernetes Nodes and Delete Cluster](5.%20kubernetes%20nodes%20and%20delete%20cluster.png)  
+<img width="492" height="218" alt="5  kubernetes nodes and delete cluster" src="https://github.com/user-attachments/assets/099c2781-705a-4888-8f29-e87305cbc436" />
 *Verified Output:* 
 - Node `ccse-control-plane` in status `Ready` (role: `control-plane`, version `v1.30.0`).
 - Successful cluster deletion of `ccse`.
@@ -227,15 +228,8 @@ aws $EP sts get-caller-identity
 ```
 
 #### Execution Output:
-![AWS CLI Configuration](6.%20AWS%20CLI%20configuration.png)  
-*Verified Output:*
-```json
-{
-    "UserId": "AKIAIOSFODNN7EXAMPLE",
-    "Account": "000000000000",
-    "Arn": "arn:aws:iam::000000000000:root"
-}
-```
+<img width="367" height="237" alt="6  AWS CLI configuration" src="https://github.com/user-attachments/assets/ae1f9e04-ca09-4850-92b6-e215387ff11a" />
+
 
 > [!TIP]
 > **Optional Shortcut:** Install `awslocal` wrapper via `pip install awscli-local`. This allows running `awslocal sts get-caller-identity` directly without specifying `$EP`.
