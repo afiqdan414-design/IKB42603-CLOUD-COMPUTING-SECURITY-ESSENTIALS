@@ -2,7 +2,7 @@
 
 **Course:** IKB42603 Cloud Computing Security Essentials  
 **Institution:** Universiti Kuala Lumpur Malaysian Institute of Information Technology (UniKL MIIT)  
-**Instructor:** Prof. Dr. Shahrulniza Musa  
+**Instructor:** Nor Adani Kamal 
 **Topic:** Compute, Network, and Storage Isolation — Docker & Kubernetes  
 **Assessment:** Lab Report (Screenshots + CLI Output + Deliverables & Short-Answer Questions)  
 
@@ -40,7 +40,8 @@ kubectl -n kube-system rollout status daemonset/calico-node --timeout=180s
 ```
 
 ### Verification Screenshot
-![Cluster Setup with Calico CNI](Setup-Cluster%20with%20policy%20enforcement.png)
+<img width="897" height="752" alt="Setup-Cluster with policy enforcement" src="https://github.com/user-attachments/assets/450620ab-0eaa-44ce-98de-4dd23aff3d76" />
+
 
 *Figure 1: Successful creation of `ccse-lab2` cluster and installation of Calico CNI Custom Resource Definitions (CRDs), DaemonSets, and RBAC components.*
 
@@ -72,7 +73,7 @@ kubectl get pods,svc -n tenant-b
 ```
 
 #### Verification Screenshot
-![Task 1 - Two Tenants on One Cluster](A.Task1-two%20tenants%20on%20one%20cluster.png)
+<img width="565" height="234" alt="A Task1-two tenants on one cluster" src="https://github.com/user-attachments/assets/d09ea913-6aba-4b99-a420-02a0ae6bbefe" />
 
 *Figure 2: Verification of running Nginx pods and ClusterIP services active within both `tenant-a` and `tenant-b` namespaces.*
 
@@ -97,7 +98,7 @@ kubectl -n tenant-a run probe --rm -it --image=curlimages/curl --restart=Never \
 - **Probe Response:** `HTTP 200`
 
 #### Verification Screenshot
-![Task 2 - Observe Default Open Risk](A.Task%202-Observe%20the%20Default-Open%20Risk.png)
+<img width="726" height="170" alt="A Task 2-Observe the Default-Open Risk" src="https://github.com/user-attachments/assets/475e7658-9c5d-4490-a133-22def37f89d0" />
 
 *Figure 3: Unrestricted cross-tenant reachability. The probe pod in `tenant-a` successfully accesses `tenant-b` web service, returning an `HTTP 200` status code.*
 
@@ -130,7 +131,7 @@ kubectl describe resourcequota tenant-a-quota -n tenant-a
 ```
 
 #### Verification Screenshot
-![Task 3 - Resource Quota Enforcement](A.Task%203-Contain%20the%20Noisy%20Neighbour.png)
+<img width="479" height="373" alt="A Task 3-Contain the Noisy Neighbour" src="https://github.com/user-attachments/assets/0550be3e-0af2-4666-b7ec-6572cc8a1067" />
 
 *Figure 4: `ResourceQuota` created in `tenant-a`, establishing hard ceilings of 1 CPU request, 512Mi Memory request, and 5 maximum pods.*
 
@@ -162,7 +163,7 @@ kubectl -n tenant-a run probe --rm -it --image=curlimages/curl --restart=Never \
 ```
 
 #### Verification Screenshot
-![Task 4 - Network Policy Default Deny](B.Task%204-Default-Deny%20Network%20Isolation.png)
+<img width="1225" height="345" alt="B Task 4-Default-Deny Network Isolation" src="https://github.com/user-attachments/assets/9cab2b32-a6d3-43f5-9a4c-abc9954661bc" />
 
 *Figure 5: NetworkPolicy enforcement active. Subsequent probe attempts from `tenant-a` are rejected, demonstrating effective network micro-segmentation.*
 
@@ -190,7 +191,7 @@ kubectl auth can-i get secrets -n tenant-b --as=$SA  # Expected: no
 ```
 
 #### Verification Screenshot
-![Task 5 - Storage and Secret Isolation](B.Task%205-Storage%20%26%20Secret%20Isolation.png)
+<img width="462" height="125" alt="B Task 5-Storage   Secret Isolation" src="https://github.com/user-attachments/assets/fb6e2bc7-2e5f-4596-9ec1-2b14edd1bad8" />
 
 *Figure 6: RBAC authorization check results. Service account `app-a` in `tenant-a` is granted access to `tenant-a` secrets (`yes`), but strictly forbidden from accessing `tenant-b` secrets (`no`).*
 
@@ -215,7 +216,7 @@ docker run --rm -v ccse-vol:/data alpine sh -c \
 ```
 
 #### Verification Screenshot
-![Task 6 - Data Remanence and Secure Deletion](B.Task%206-Data%20Remanence%20%26%20Secure%20Deletion.png)
+<img width="658" height="233" alt="B Task 6-Data Remanence   Secure Deletion" src="https://github.com/user-attachments/assets/b20ecb55-6854-48d0-8728-22a52f78604f" />
 
 *Figure 7: Execution of standard file deletion vs. zero-block overwrite (`dd if=/dev/zero`) ensuring physical storage blocks are scrubbed clean prior to pointer removal.*
 
@@ -231,7 +232,7 @@ kubectl describe resourcequota tenant-a-quota -n tenant-a
 ```
 
 #### Verification Screenshot
-![Verification Commands](Verification%20command.png)
+<img width="499" height="231" alt="Verification command" src="https://github.com/user-attachments/assets/e2912344-871d-4412-ab80-409dd32a3029" />
 
 *Figure 8: Cluster verification status confirming `default-deny-ingress` NetworkPolicy active in `tenant-b` and `tenant-a-quota` ResourceQuota active in `tenant-a`.*
 
