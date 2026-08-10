@@ -3,7 +3,7 @@
 
 * **Course**: IKB42603 Cloud Computing Security Essentials
 * **Institution**: Universiti Kuala Lumpur Malaysian Institute of Information Technology (UniKL MIIT)
-* **Instructor**: Nor Adani Kamal Mohamad Nasir
+* **Instructor**: Nor Adani Kamal
 * **Student / Environment Identity**: `afiqdanial` (`CloudAdmin_AFIQ`, `Analyst_AFIQ`)
 * **Date**: August 2026
 
