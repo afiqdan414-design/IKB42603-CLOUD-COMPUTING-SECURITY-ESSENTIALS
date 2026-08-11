@@ -94,11 +94,11 @@ kubectl -n tenant-a run probe --rm -it --image=curlimages/curl --restart=Never \
 ```
 
 #### Output Analysis
-- **Tenant B Service IP:** `10.96.53.148`
+- **Tenant B Service IP:** `**.**.**.***`
 - **Probe Response:** `HTTP 200`
 
 #### Verification Screenshot
-<img width="726" height="170" alt="A Task 2-Observe the Default-Open Risk" src="https://github.com/user-attachments/assets/475e7658-9c5d-4490-a133-22def37f89d0" />
+<img width="730" height="170" alt="A Task 2-Observe the Default-Open Risk" src="https://github.com/user-attachments/assets/a11a0ac0-a953-4a14-a066-6fd9fce66469" />
 
 *Figure 3: Unrestricted cross-tenant reachability. The probe pod in `tenant-a` successfully accesses `tenant-b` web service, returning an `HTTP 200` status code.*
 
@@ -159,11 +159,11 @@ EOF
 
 # Re-run cross-tenant network probe from tenant-a to tenant-b
 kubectl -n tenant-a run probe --rm -it --image=curlimages/curl --restart=Never \
-  -- curl -s -m 5 http://10.96.53.148 -o /dev/null -w 'HTTP %{http_code}\n'
+  -- curl -s -m 5 http://<B_IP> -o /dev/null -w 'HTTP %{http_code}\n'
 ```
 
 #### Verification Screenshot
-<img width="1225" height="345" alt="B Task 4-Default-Deny Network Isolation" src="https://github.com/user-attachments/assets/9cab2b32-a6d3-43f5-9a4c-abc9954661bc" />
+<img width="1228" height="345" alt="B Task 4-Default-Deny Network Isolation" src="https://github.com/user-attachments/assets/2db58dd9-e683-46fe-b5a3-a52e976232ec" />
 
 *Figure 5: NetworkPolicy enforcement active. Subsequent probe attempts from `tenant-a` are rejected, demonstrating effective network micro-segmentation.*
 
