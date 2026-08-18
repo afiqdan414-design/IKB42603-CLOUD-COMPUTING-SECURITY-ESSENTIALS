@@ -1,8 +1,7 @@
 # Lab 3: Data Protection — Encryption & Key Management
 **Course:** IKB42603 Cloud Computing Security Essentials  
 **Institution:** Universiti Kuala Lumpur — Malaysian Institute of Information Technology (UniKL MIIT)  
-**Lecturer:** Prof. Dr. Shahrulniza Musa  
-**Student:** Afiq Danial (`afiqdanial@afiq`)  
+**Lecturer:** Nor Adani Kamal   
 **Scope:** Weeks 5–6 (Session A: Encryption Fundamentals | Session B: Key Management, Envelope Encryption & Erasure)  
 
 ---
@@ -57,7 +56,7 @@ diff record.txt record.dec.txt && echo 'MATCH: decryption successful'
 ```
 
 #### Terminal Execution & Evidence
-![Task 1 — Symmetric Encryption](Task%201%20—%20Symmetric%20Encryption.png)
+<img width="588" height="63" alt="Task 1 — Symmetric Encryption" src="https://github.com/user-attachments/assets/cbf9e739-5198-4a1a-a73f-ffa7cfd7ada0" />
 
 ```text
 (afiqdanial@afiq)-[~/Lab3]
@@ -94,7 +93,7 @@ openssl dgst -sha256 -verify public.pem -signature record.sig record.txt
 ```
 
 #### Terminal Execution & Evidence
-![Task 2 — Asymmetric Encryption & Digital Signatures](Task%202%20—%20Asymmetric%20Encryption%20%26%20Digital%20Signatures.png)
+<img width="619" height="65" alt="Task 2 — Asymmetric Encryption   Digital Signatures" src="https://github.com/user-attachments/assets/1f585691-6877-4e1d-83a3-894611deeb64" />
 
 ```text
 (afiqdanial@afiq)-[~/Lab3]
@@ -129,7 +128,7 @@ curl -k https://localhost:8443/record.txt
 ```
 
 #### Terminal Execution & Evidence
-![Task 3 — Encryption in Transit](Task%203%20—%20Encryption%20in%20Transit.png)
+<img width="381" height="45" alt="Task 3 — Encryption in Transit" src="https://github.com/user-attachments/assets/3b034d2e-86c9-469f-936d-848c5106a1f3" />
 
 ```text
 (afiqdanial@afiq)-[~/Lab3]
@@ -169,7 +168,7 @@ aws $EP kms encrypt --key-id $KEY_A --plaintext "$(echo -n 'hello' | base64)" \
 ```
 
 #### Terminal Execution & Evidence
-![Task 4 — Create and Use a KMS Master Key](Task%204%20—%20Create%20and%20Use%20a%20KMS%20Master%20Key.png)
+<img width="907" height="58" alt="Task 4 — Create and Use a KMS Master Key" src="https://github.com/user-attachments/assets/0e9acee9-ebc0-4626-869b-c57011c77728" />
 
 ```text
 (afiqdanial@afiq)-[~/Lab3]
@@ -203,7 +202,7 @@ echo 'Only the KMS-wrapped data key (datakey.enc) remains.'
 ```
 
 #### Terminal Execution & Evidence
-![Task 5 — Envelope Encryption](Task%205%20—%20Envelope%20Encryption.png)
+<img width="520" height="143" alt="Task 5 — Envelope Encryption" src="https://github.com/user-attachments/assets/6f60287e-92b2-408f-a8d7-0d6346cbaba7" />
 
 ```text
 (afiqdanial@afiq)-[~/Lab3]
@@ -236,7 +235,7 @@ aws $EP kms decrypt --ciphertext-blob fileb://datakey.enc 2>&1 | head -3
 ```
 
 #### Terminal Execution & Evidence
-![Task 6 — Per-Tenant Keys & Cryptographic Erasure](Task%206%20—%20Per-Tenant%20Keys%20%26%20Cryptographic%20Erasure.png)
+<img width="1567" height="187" alt="Task 6 — Per-Tenant Keys   Cryptographic Erasure" src="https://github.com/user-attachments/assets/b96f42b2-65a8-4686-8696-06b613368bfd" />
 
 ```text
 (afiqdanial@afiq)-[~/Lab3]
@@ -277,7 +276,7 @@ done
 ```
 
 #### Terminal Execution & Evidence
-![Task 7 — Integrity & Tamper-Evidence](Task%207%20—%20Integrity%20%26%20Tamper-Evidence.png)
+<img width="642" height="140" alt="Task 7 — Integrity   Tamper-Evidence" src="https://github.com/user-attachments/assets/d843e0d5-71bd-4b45-9e27-cf9484b67623" />
 
 ```text
 PREV=0
@@ -307,7 +306,7 @@ openssl dgst -sha256 -verify public.pem -signature record.sig record.txt
 ```
 
 #### Verification Terminal Evidence
-![Verification Command](Verification%20Command.png)
+<img width="808" height="307" alt="Verification Command" src="https://github.com/user-attachments/assets/4291c6da-6e32-4c7f-95f5-28a86127afca" />
 
 ```text
 $ aws --endpoint-url=http://localhost:4566 kms list-keys
