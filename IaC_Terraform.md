@@ -3,7 +3,7 @@
 
 * **Course**: IKB42603 Cloud Computing Security Essentials
 * **Institution**: Universiti Kuala Lumpur Malaysian Institute of Information Technology (UniKL MIIT)
-* **Instructor**: Prof. Dr. Shahrulniza Musa
+* **Instructor**: Nor Adani Kamal
 * **Student / Environment Identity**: `CloudAdmin_Ainin` (`Admins-1`)
 * **Date**: August 2026
 
@@ -145,7 +145,7 @@ Verify that Terraform is installed correctly on the workstation prior to running
 terraform -v
 ```
 
-![Terraform Version](Terraform%20version.png)
+<img width="693" height="113" alt="Terraform version" src="https://github.com/user-attachments/assets/119fac1e-c984-48e7-93f3-0917e2405195" />
 
 * **Evidence Analysis**: Confirms Terraform executable version `v1.6.3-dev` running on `linux_amd64` with AWS provider plugin version `v6.58.0`.
 
@@ -159,7 +159,7 @@ Download and initialize the AWS provider plugins required by `main.tf`:
 terraform init
 ```
 
-![Terraform Init](Terraform%20Init.png)
+<img width="640" height="185" alt="Terraform Init" src="https://github.com/user-attachments/assets/78019c2d-869a-4b5c-ae2b-1ce4c8bd622d" />
 
 * **Evidence Analysis**: Prepares the workspace directory, creating `.terraform/` and locking provider dependencies.
 
@@ -173,7 +173,7 @@ Enforce canonical HashiCorp HCL formatting and code alignment standards across c
 terraform fmt
 ```
 
-![Terraform Format](Terraform%20fmt.png)
+<img width="294" height="29" alt="Terraform fmt" src="https://github.com/user-attachments/assets/c9b9d5f7-0ead-4586-a431-1035e55cd278" />
 
 * **Evidence Analysis**: Automatically formats `main.tf` to ensure consistent indentation, line breaks, and argument alignment.
 
@@ -187,7 +187,7 @@ Check configuration files for syntax errors, missing arguments, or type mismatch
 terraform validate
 ```
 
-![Terraform Validate](Terraform%20validate.png)
+<img width="294" height="45" alt="Terraform validate" src="https://github.com/user-attachments/assets/07777663-6518-4704-97f3-13f209139c14" />
 
 * **Evidence Analysis**: Terminal displays `Success! The configuration is valid.` confirming HCL syntax and internal reference validity.
 
@@ -201,7 +201,7 @@ Generate and inspect an execution plan to preview resource additions, modificati
 terraform plan
 ```
 
-![Terraform Plan](Terraform%20plan.png)
+<img width="1115" height="717" alt="Terraform plan" src="https://github.com/user-attachments/assets/d8e897ae-3597-489b-bb04-0ccb12190fe3" />
 
 * **Evidence Analysis**:
   * `aws_iam_group.admins` will be created (`name = "Admins-1"`).
@@ -220,7 +220,7 @@ Execute the actions proposed in the execution plan to provision resources in Loc
 terraform apply
 ```
 
-![Terraform Apply](Terraform%20apply.png)
+<img width="1007" height="305" alt="Terraform apply" src="https://github.com/user-attachments/assets/fa6df725-aa05-42ed-83ba-3078ff29d6f7" />
 
 * **Evidence Analysis**:
   * Interactive prompt approved with `yes`.
@@ -249,7 +249,7 @@ Query LocalStack IAM to confirm that group `Admins-1` exists and contains member
 aws $EP iam get-group --group-name Admins-1
 ```
 
-![Terraform Verify Group](Terraform%20verify%20sources-group.png)
+<img width="564" height="325" alt="Terraform verify sources-group" src="https://github.com/user-attachments/assets/87bf6678-985a-456a-8225-6deee7c23f05" />
 
 * **Verification Evidence Output**:
   ```json
@@ -279,7 +279,7 @@ Query LocalStack IAM to verify that the `AdministratorAccess` policy is attached
 aws $EP iam list-attached-group-policies --group-name Admins-1
 ```
 
-![Terraform Verify Policies](Terraform%20verify%20sources-policies.png)
+<img width="583" height="165" alt="Terraform verify sources-policies" src="https://github.com/user-attachments/assets/f239f479-9d55-41fd-9f2f-78cde4a63614" />
 
 * **Verification Evidence Output**:
   ```json
@@ -303,7 +303,7 @@ Demonstrate clean infrastructure lifecycle management by destroying all Terrafor
 terraform destroy
 ```
 
-![Terraform Destroy](Terraform%20destroy.png)
+<img width="888" height="180" alt="Terraform destroy" src="https://github.com/user-attachments/assets/7a05ff65-6a42-41cb-9eb9-e92e78b929c4" />
 
 * **Evidence Analysis**:
   * Terraform reads state file `terraform.tfstate` and determines reverse dependency teardown order.
