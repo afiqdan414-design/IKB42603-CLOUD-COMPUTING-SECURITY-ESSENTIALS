@@ -1,7 +1,7 @@
 # Lab 4 Report: Access Control & Network Security
 **Course:** IKB42603 Cloud Computing Security Essentials  
 **Institution:** Universiti Kuala Lumpur Malaysian Institute of Information Technology (UniKL MIIT)  
-**Instructor:** Prof. Dr. Shahrulniza Musa  
+**Instructor:** Nor Adani Kamal  
 **Student Environment:** `afiqdanial@afiq`  
 **Lab Duration:** Weeks 7–8 (Sessions A & B)  
 
