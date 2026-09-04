@@ -92,7 +92,7 @@ aws $EP logs get-log-events --log-group-name /ccse/app --log-stream-name auth \
 2025-03-01T09:00:01 LOGIN_OK user=ahmad ip=10.0.0.5	2025-03-01T09:01:10 LOGIN_FAIL user=admin ip=203.0.113.9	2025-03-01T09:01:12 LOGIN_FAIL user=admin ip=203.0.113.9	2025-03-01T09:01:15 LOGIN_FAIL user=admin ip=203.0.113.9	2025-03-01T09:01:18 LOGIN_FAIL user=admin ip=203.0.113.9	2025-03-01T09:01:22 LOGIN_OK user=admin ip=203.0.113.9	2025-03-01T09:01:40 EXPORT_DATA user=admin ip=203.0.113.9 size=500MB
 ```
 
-![Task 2 — Centralise Logs](file:///d:/UNIKL%20WOI/UNIKL%20MIIT/SEM%205/Short%20Sem/Cloud%20Computing/Lab5/Task%202%20%E2%80%94%20Centralise%20Logs%20%28Ship%20to%20CloudWatch%29.png)
+<img width="1889" height="70" alt="Task 2 — Centralise Logs (Ship to CloudWatch)" src="https://github.com/user-attachments/assets/9c9e9da8-f0f6-4ee3-a39e-00d73abbcd58" />
 
 ---
 
@@ -109,7 +109,7 @@ grep LOGIN_FAIL auth.log | awk '{print $4, $5}' | sort | uniq -c
       4 user=admin ip=203.0.113.9
 ```
 
-![Task 3 — Query Security Activity](file:///d:/UNIKL%20WOI/UNIKL%20MIIT/SEM%205/Short%20Sem/Cloud%20Computing/Lab5/Task%203%20%E2%80%94%20Query%20for%20Security-Relevant%20Activity.png)
+<img width="547" height="37" alt="Task 3 — Query for Security-Relevant Activity" src="https://github.com/user-attachments/assets/91246b15-7a86-4201-b074-04a5cb5abf22" />
 
 ---
 
@@ -149,7 +149,7 @@ sed 's/500MB/5MB/' auth.log > auth.tampered
 
 When re-running the hash chain against `auth.tampered`, the modified line alters its hash, causing all subsequent hashes in the chain to diverge and failing validation against `auth.chain`.
 
-![Task 4 — Tamper-Proof Logs](file:///d:/UNIKL%20WOI/UNIKL%20MIIT/SEM%205/Short%20Sem/Cloud%20Computing/Lab5/Task%204%20%E2%80%94%20Tamper-Proof%20%28Hash-Chained%29%20Logs.png)
+<img width="1088" height="297" alt="Task 4 — Tamper-Proof (Hash-Chained) Logs" src="https://github.com/user-attachments/assets/8e6e95e2-5c1d-46ab-aea0-1c1a53db4efd" />
 
 ---
 
@@ -175,7 +175,7 @@ IP=203.0.113.9 fails=4 success=1 export=1
 ALERT: probable brute-force -> compromise -> data exfiltration
 ```
 
-![Task 5 — Detect Incident](file:///d:/UNIKL%20WOI/UNIKL%20MIIT/SEM%205/Short%20Sem/Cloud%20Computing/Lab5/Task%205%20%E2%80%94%20Detect%20the%20Incident%20%28Correlation%29.png)
+<img width="606" height="166" alt="Task 5 — Detect the Incident (Correlation)" src="https://github.com/user-attachments/assets/329446f2-7205-4654-9d53-9e9c9865246c" />
 
 ---
 
@@ -210,7 +210,7 @@ cat evidence.sha256
 0adc5d2ac06cbbdd366099bcc0540c4c0f76946e71b52e4c99322731696a203b  evidence_20260905.log
 ```
 
-![Task 6 — Incident Response](file:///d:/UNIKL%20WOI/UNIKL%20MIIT/SEM%205/Short%20Sem/Cloud%20Computing/Lab5/Task%206%20%E2%80%94%20Incident%20Response.png)
+<img width="706" height="222" alt="Task 6 — Incident Response" src="https://github.com/user-attachments/assets/0a397517-55be-42b0-a907-ebcdefd2d5e0" />
 
 ---
 
@@ -291,7 +291,7 @@ sha256sum -c evidence.sha256
 evidence_20260905.log: OK
 ```
 
-![Verification Command](file:///d:/UNIKL%20WOI/UNIKL%20MIIT/SEM%205/Short%20Sem/Cloud%20Computing/Lab5/Verification%20command.png)
+<img width="678" height="260" alt="Verification command" src="https://github.com/user-attachments/assets/aeeaf7ea-d884-4b13-865f-eee59f5f9726" />
 
 ---
 
