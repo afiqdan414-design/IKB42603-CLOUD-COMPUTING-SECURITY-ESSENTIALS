@@ -5,7 +5,7 @@
 **Course Name:** Cloud Computing Security Essentials  
 **Lab Title:** Lab 5 — Monitoring, Logging & Incident Detection  
 **Institution:** UniKL MIIT  
-**Lecturer:** Prof. Dr. Shahrulniza Musa  
+**Lecturer:** Nor Adani Kamal 
 
 ---
 
