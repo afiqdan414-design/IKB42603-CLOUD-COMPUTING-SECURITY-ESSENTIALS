@@ -58,6 +58,7 @@ aws $EP sts get-caller-identity
 The container started successfully, listening on port `4566`. The `sts get-caller-identity` verification verified execution under account ID `000000000000` with the root ARN `arn:aws:iam::000000000000:root`.
 
 <img width="932" height="617" alt="WhatsApp Image 2026-09-11 at 22 44 25 (6)" src="https://github.com/user-attachments/assets/6766845d-711e-477e-a1f9-83ae870d826f" />
+
 *Figure 1: Initialization of LocalStack with `ENFORCE_IAM=1` and AWS STS identity verification.*
 
 ---
