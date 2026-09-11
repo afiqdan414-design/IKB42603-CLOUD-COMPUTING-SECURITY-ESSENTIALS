@@ -7,7 +7,7 @@
 ### Student & Course Information
 * **Course:** IKB42603 Cloud Computing Security Essentials
 * **Institution:** Universiti Kuala Lumpur — Malaysian Institute of Information Technology (UniKL MIIT)
-* **Instructor:** Prof. Dr. Shahrulniza Musa
+* **Instructor:** Nor Adani Kamal
 * **Lab Sessions:** Weeks 11 – 12 (Session A & Session B)
 * **Course Learning Outcome:** CLO2 — Construct secure cloud operations that safeguard data confidentiality and integrity (VBE3)
 * **CSA CCSK v5 Domains:** Domain 5 (Data Security), Domain 4 (Organisation Management), Domain 9 (Application Security — Resource Policy)
@@ -57,7 +57,7 @@ aws $EP sts get-caller-identity
 ### Setup Execution Evidence
 The container started successfully, listening on port `4566`. The `sts get-caller-identity` verification verified execution under account ID `000000000000` with the root ARN `arn:aws:iam::000000000000:root`.
 
-![Environment Setup Evidence](./task_setup.png)
+<img width="932" height="617" alt="WhatsApp Image 2026-09-11 at 22 44 25 (6)" src="https://github.com/user-attachments/assets/6766845d-711e-477e-a1f9-83ae870d826f" />
 *Figure 1: Initialization of LocalStack with `ENFORCE_IAM=1` and AWS STS identity verification.*
 
 ---
